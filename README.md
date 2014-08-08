@@ -1,3 +1,3 @@
 dotfiles of mine ^^
 Screenshot :
-.. image::screen.png
+![pic](screen.png)
