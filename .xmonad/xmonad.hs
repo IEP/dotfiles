@@ -50,6 +50,7 @@ mkeys = [ ((mod4Mask, xK_Return), spawn "urxvt")
         , ((mod4Mask, xK_Down), sendMessage MirrorShrink)
         , ((mod4Mask, xK_r), spawn "dmenu_run -b -fn 'Inconsolata for Powerline' -nb '#EEEEEE' -nf '#0D0B0D' -sf '#FFFFFF' -sb '#007FFF'")
         , ((mod4Mask .|. shiftMask, xK_r), spawn "killall dzen2 && xmonad --restart")
+        , ((0, xK_Print), spawn "xfce4-screenshooter")
         ]
 
 black = "#0D0B0D"

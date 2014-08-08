@@ -29,12 +29,11 @@ ${exec amixer -M get Master | awk 'END{gsub(/\[|\]|%/,""); print $4;}'} \
 $if_mpd_playing\
 ^bg(\#EEEEEE)\
 ^fg(\#0B0D0B)\
-${mpd_title 20} \
-^ca()\
 ^ca(3, mpc stop)\
-^ca(1, mpc prev)\
+${mpd_title 20} \
 ^fg(\#EEEEEE)\
 ^bg(\#0B0D0B) \
+^ca(1, mpc prev)\
 ^i(/home/deega/.xmonad/icons/prev.xbm) \
 ^ca()\
 ^ca(1, mpc toggle)\
