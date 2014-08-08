@@ -1,0 +1,30 @@
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+URxvt.font: xft:Meslo LG S for Powerline:size=8
+URxvt.scrollBar: false
+
+urxvt.background:   #f4f4f4
+urxvt.foreground:   #0d0b0d
+urxvt.cursorColor:  #0d0b0d
+urxvt.color0:   #292929
+urxvt.color8:   #565656
+urxvt.color1:   #b37536
+urxvt.color9:   #ebd3bc
+urxvt.color2:   #36b375
+urxvt.color10:  #bcebd3
+urxvt.color3:   #75b336
+urxvt.color11:  #d3ebbc
+urxvt.color4:   #7536b3
+urxvt.color12:  #d3bceb
+urxvt.color5:   #b33675
+urxvt.color13:  #ebbcd3
+urxvt.color6:   #3675b3
+urxvt.color14:  #bcd3eb
+urxvt.color7:   #c2c2c2
+urxvt.color15:  #f4f4f4

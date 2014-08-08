@@ -1,0 +1,52 @@
+background no
+out_to_console yes
+out_to_x no
+update_interval 0.5
+mpd_host localhost
+total_run_times 0
+use_spacer none
+use_xft yes
+
+TEXT
+^bg(\#EEEEEE)\
+^fg(\#0B0D0B)\
+^i(/home/deega/.xmonad/icons/net_up_03.xbm) \
+${upspeedf enp2s0} \
+^i(/home/deega/.xmonad/icons/net_down_03.xbm) \
+${downspeedf enp2s0} \
+^ca(1, urxvt -e alsamixer)\
+^ca(3, amixer -M set Master playback 0)\
+^ca(4, amixer -M set Master playback 1%+ unmute)\
+^ca(5, amixer -M set Master playback 1%- unmute)\
+^i(/home/deega/.xmonad/icons/spkr_01.xbm) \
+${exec amixer -M get Master | awk 'END{gsub(/\[|\]|%/,""); print $4;}'} \
+^ca()\
+^ca()\
+^ca()\
+^ca()\
+^ca(1, urxvt -t ncmpcpp -e ncmpcpp)\
+^i(/home/deega/.xmonad/icons/note.xbm) \
+$if_mpd_playing\
+^bg(\#EEEEEE)\
+^fg(\#0B0D0B)\
+${mpd_title 20} \
+^ca()\
+^ca(3, mpc stop)\
+^ca(1, mpc prev)\
+^fg(\#EEEEEE)\
+^bg(\#0B0D0B) \
+^i(/home/deega/.xmonad/icons/prev.xbm) \
+^ca()\
+^ca(1, mpc toggle)\
+^i(/home/deega/.xmonad/icons/playpause.xbm) \
+^ca()\
+^ca(1, mpc next)\
+^i(/home/deega/.xmonad/icons/next.xbm) \
+^ca()\
+^ca()\
+^fg()\
+$endif\
+^ca()\
+^bg(\#007FFF)\
+^fg(\#EEEEEE) \
+${exec date +"%R"} \
