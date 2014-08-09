@@ -2,8 +2,8 @@ import XMonad
 import Control.Monad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.SetWMName
 
 import XMonad.Util.Run
 import XMonad.Util.EZConfig
@@ -29,9 +29,9 @@ i = "^i(/home/deega/.xmonad/icons/"
 
 myfn = "Koruri:Regular:size=10"
 myws :: [String]
-myws = clickable $ [ i ++ "term.xbm)"
-                   , i ++ "cat.xbm)"
-                   , i ++ "diskette.xbm)"
+myws = clickable $ [ "^ca(3,urxvt)" ++ i ++ "term.xbm)^ca()"
+                   , "^ca(3,firefox)" ++ i ++ "cat.xbm)^ca()"
+                   , "^ca(3,thunar)" ++ i ++ "diskette.xbm)^ca()"
                    , i ++ "docs.xbm)"
                    , i ++ "media.xbm)"
                    , i ++ "grid.xbm)"
@@ -58,6 +58,9 @@ grey  = "#EEEEEE"
 grey1 = "#CFCFCF"
 white = "#FFFFFF"
 blue  = "#007FFF"
+oren  = "#FF8000"
+custz = "#303030"
+custy = "#4F4F4F"
 
 logBar h = do
        dynamicLogWithPP $ thePP h
@@ -67,10 +70,10 @@ thePP h = defaultPP
         , ppVisible         = dzenColor (black) (grey) . pad
         , ppHidden          = dzenColor (black) (grey) . pad
         , ppHiddenNoWindows = dzenColor (grey1) (grey) . pad
-        , ppUrgent          = dzenColor (blue) (grey) . pad
+        , ppUrgent          = dzenColor (blue)  (grey) . pad
         , ppWsSep           = ""
         , ppSep             = " "
-        , ppLayout          = dzenColor (grey) (blue) .
+        , ppLayout          = dzenColor (white) (oren) .
                   (\z -> case z of
                       "Spacing 2 ResizableTall" -> click ++ tempat ++ "dwindle.xbm)^ca() "
                       "Full"                    -> click ++ tempat ++ "monocle.xbm)^ca() "
@@ -111,7 +114,7 @@ main = do
         , layoutHook =  avoidStruts $ smartBorders $ (spacing 2 $ layoutHook defaultConfig ||| res ) ||| ful
         , modMask = mod4Mask
         , focusedBorderColor = "#007fff"
-        , normalBorderColor = "#efefef"
+        , normalBorderColor = "#4f4f4f"
         , borderWidth = 1
         , workspaces = myws
         , terminal = "urxvt"

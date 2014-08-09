@@ -30,22 +30,24 @@ $if_mpd_playing\
 ^bg(\#EEEEEE)\
 ^fg(\#0B0D0B)\
 ^ca(3, mpc stop)\
-${mpd_title 20} \
+${mpd_title 40} \
 ^fg(\#EEEEEE)\
-^bg(\#0B0D0B) \
+^bg(\#FF8000) \
 ^ca(1, mpc prev)\
-^i(/home/deega/.xmonad/icons/prev.xbm) \
+ ^i(/home/deega/.xmonad/icons/prev.xbm) \
 ^ca()\
 ^ca(1, mpc toggle)\
-^i(/home/deega/.xmonad/icons/playpause.xbm) \
+ ^i(/home/deega/.xmonad/icons/playpause.xbm) \
 ^ca()\
 ^ca(1, mpc next)\
-^i(/home/deega/.xmonad/icons/next.xbm) \
+ ^i(/home/deega/.xmonad/icons/next.xbm)  \
 ^ca()\
 ^ca()\
 ^fg()\
 $endif\
 ^ca()\
-^bg(\#007FFF)\
+^bg()\
+^fg() \
+^bg(\#007FFF) \
 ^fg(\#EEEEEE) \
-${exec date +"%R"} \
+${exec date +"%a %b%d %H:%M" | tr '[:lower:]' '[:upper:]'}  \

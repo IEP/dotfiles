@@ -111,7 +111,7 @@ song_status_format = "$5%a$0 $2• $0%t $4"
 ## text attributes listed above.
 ##
 #
-now_playing_prefix = "$b$1» $0"
+now_playing_prefix = "$b$8» $0"
 #
 now_playing_suffix = "$/b"
 #
