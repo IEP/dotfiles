@@ -99,6 +99,7 @@ myHook = composeAll
         , className =? "Thunar"               --> doShift (myws !! 2)
         , className =? "Evince"               --> doShift (myws !! 3)
         , className =? "libreoffice"          --> doShift (myws !! 3)
+        , className =? "Geany"                --> doShift (myws !! 3)
         , className =? "Vlc"                  --> doFloat
         , className =? "Vlc"                  --> doShift (myws !! 4)
         , className =? "Gimp"                 --> doFloat
