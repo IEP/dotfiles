@@ -112,7 +112,8 @@ main = do
     panel1 <- spawnPipe "sh /home/deega/.xmonad/script/pk.sh"
     xmonad $ defaultConfig
         { manageHook = myHook
-        , layoutHook =  avoidStruts $ smartBorders $ (spacing 2 $ layoutHook defaultConfig ||| res ) ||| ful
+        , layoutHook =  avoidStruts $ smartBorders $
+                        (spacing 2 $ layoutHook defaultConfig ||| res ) ||| ful
         , modMask = mod4Mask
         , focusedBorderColor = "#007fff"
         , normalBorderColor = "#4f4f4f"
