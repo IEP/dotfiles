@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="deega"
+ZSH_THEME="lambda"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -80,4 +80,12 @@ export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias zrestart="systemctl reboot"
+alias matikan="systemctl poweroff"
+alias hape="go-mtpfs ~/Android"
+alias hapeoff="fusermount -u ~/Android"
+alias colorize="~/scripts/colors.sh"
+alias nitrogen="nitrogen ~/Wallpaper"
+
 unset HISTFILE
