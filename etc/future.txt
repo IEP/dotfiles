@@ -1,0 +1,2 @@
+X       xrandr | head -n 1 | cut -d' ' -f9
+Y       xrandr | head -n 1 | cut -d' ' -f10 | sed -e 's/,//g'
