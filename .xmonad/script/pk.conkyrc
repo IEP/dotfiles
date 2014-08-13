@@ -50,4 +50,6 @@ $endif\
 ^fg() \
 ^bg(\#007FFF) \
 ^fg(\#EEEEEE) \
+^ca(1, /home/deega/.xmonad/script/tanggalan.sh)\
 ${exec date +"%a %b%d %H:%M" | tr '[:lower:]' '[:upper:]'}  \
+^ca()\
