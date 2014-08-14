@@ -8,48 +8,25 @@ use_spacer none
 use_xft yes
 
 TEXT
-^bg(\#EEEEEE)\
-^fg(\#0B0D0B)\
-^i(/home/deega/.xmonad/icons/net_up_03.xbm) \
-${upspeedf enp2s0} \
-^i(/home/deega/.xmonad/icons/net_down_03.xbm) \
-${downspeedf enp2s0} \
-^ca(1, urxvt -e alsamixer)\
-^ca(3, amixer -M set Master playback 0)\
-^ca(4, amixer -M set Master playback 1%+ unmute)\
-^ca(5, amixer -M set Master playback 1%- unmute)\
-^i(/home/deega/.xmonad/icons/spkr_01.xbm) \
-${exec amixer -M get Master | awk 'END{gsub(/\[|\]|%/,""); print $4;}'} \
-^ca()\
-^ca()\
-^ca()\
-^ca()\
-^ca(1, urxvt -t ncmpcpp -e ncmpcpp)\
-^i(/home/deega/.xmonad/icons/note.xbm) \
+^bg(\#EEEEEE)^fg(\#0B0D0B)\
+^i(/home/deega/.xmonad/icons/net_up_03.xbm) ${upspeedf enp2s0} \
+^i(/home/deega/.xmonad/icons/net_down_03.xbm) ${downspeedf enp2s0} \
+^ca(1, urxvt -e alsamixer)^ca(3, amixer -M set Master playback 0)\
+^ca(4, amixer -M set Master playback 1%+ unmute)^ca(5, amixer -M set Master playback 1%- unmute)\
+^i(/home/deega/.xmonad/icons/spkr_01.xbm) ${exec amixer -M get Master | awk 'END{gsub(/\[|\]|%/,""); print $4;}'} \
+^ca()^ca()^ca()^ca()\
+^ca(1, urxvt -t ncmpcpp -e ncmpcpp)^i(/home/deega/.xmonad/icons/note.xbm) \
 $if_mpd_playing\
-^bg(\#EEEEEE)\
-^fg(\#0B0D0B)\
-^ca(3, mpc stop)\
-${mpd_title 40} \
-^fg(\#EEEEEE)\
-^bg(\#FF8000) \
-^ca(1, mpc prev)\
- ^i(/home/deega/.xmonad/icons/prev.xbm) \
-^ca()\
-^ca(1, mpc toggle)\
- ^i(/home/deega/.xmonad/icons/playpause.xbm) \
-^ca()\
-^ca(1, mpc next)\
- ^i(/home/deega/.xmonad/icons/next.xbm)  \
-^ca()\
-^ca()\
-^fg()\
+^bg(\#EEEEEE)^fg(\#0B0D0B)\
+^ca(3, mpc stop)${mpd_title 40} \
+^fg(\#EEEEEE)^bg(\#FF8000)\
+^ca(1, mpc prev) ^i(/home/deega/.xmonad/icons/prev.xbm) ^ca()\
+^ca(1, mpc toggle) ^i(/home/deega/.xmonad/icons/playpause.xbm) ^ca()\
+^ca(1, mpc next) ^i(/home/deega/.xmonad/icons/next.xbm) ^ca()\
+^ca()^fg()^bg() \
 $endif\
-^ca()\
-^bg()\
-^fg() \
-^bg(\#007FFF) \
-^fg(\#EEEEEE) \
+^ca()^bg()^fg()\
+^bg(\#007FFF) ^fg(\#EEEEEE) \
 ^ca(1, /home/deega/.xmonad/script/tanggalan.sh)\
 ${exec date +"%a %b%d %H:%M" | tr '[:lower:]' '[:upper:]'}  \
 ^ca()\
