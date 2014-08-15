@@ -82,6 +82,7 @@ thePP h = defaultPP
                       "Spacing 2 Full"          -> click ++ tempat ++ "monocle2.xbm)^ca() "
                   )
         , ppTitle           = ("" ++) . dzenColor (black) (grey) . shorten 100
+        , ppOrder           = \(ws:l:t:_) -> [ws,l]
         , ppOutput          = hPutStrLn h
         }
         where tempat = " ^i(/home/deega/.xmonad/icons/strlach/"
