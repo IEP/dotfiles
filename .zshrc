@@ -85,7 +85,6 @@ export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
 alias zrestart="systemctl reboot"
 alias matikan="systemctl poweroff"
 alias hape="~/scripts/hape"
-alias colorize="~/scripts/colors.sh"
 alias nitrogen="nitrogen ~/Wallpaper"
 
 unset HISTFILE
