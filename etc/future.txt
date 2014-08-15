@@ -1,3 +1,3 @@
 X       xrandr | head -n 1 | cut -d' ' -f9
 Y       xrandr | head -n 1 | cut -d' ' -f10 | sed -e 's/,//g'
-Volume  amixer -M sget Master | tail -n 1 | sed -r "s/.*\[(.*)\%\].*/\1/"
+Volume  amixer -M sget Master | tail -n 1 | sed -r "s/.*\[([0-9]+)\%\].*/\1/"
