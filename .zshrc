@@ -46,12 +46,13 @@ ZSH_THEME="lambda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rake)
+plugins=(git rake sprunge)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export PATH=$HOME/scripts:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -83,8 +84,7 @@ export PATH=$(ruby -rubygems -e "puts Gem.user_dir")/bin:$PATH
 
 alias zrestart="systemctl reboot"
 alias matikan="systemctl poweroff"
-alias hape="go-mtpfs ~/Android"
-alias hapeoff="fusermount -u ~/Android"
+alias hape="~/scripts/hape"
 alias colorize="~/scripts/colors.sh"
 alias nitrogen="nitrogen ~/Wallpaper"
 

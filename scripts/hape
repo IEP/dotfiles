@@ -1,0 +1,2 @@
+trap "fusermount -u ~/Android" INT
+go-mtpfs ~/Android
