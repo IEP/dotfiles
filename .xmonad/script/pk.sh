@@ -1,4 +1,4 @@
-fn="Koruri:Regular:size=10"
+fn="Koruri:Bold:size=8"
 bg="#eeeeee"
 fg="#333333"
 

@@ -27,7 +27,7 @@ import System.IO
 
 i = "^i(/home/deega/.xmonad/icons/"
 
-myfn = "Koruri:Regular:size=10"
+myfn = "Koruri:Bold:size=8"
 myws :: [String]
 myws = clickable $ [ "^ca(3,urxvt)" ++ i ++ "term.xbm)^ca()"
                    , "^ca(3,firefox)" ++ i ++ "cat.xbm)^ca()"
