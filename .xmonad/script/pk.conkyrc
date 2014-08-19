@@ -9,6 +9,8 @@ use_xft yes
 
 TEXT
 ^bg(\#EEEEEE)^fg(\#0B0D0B)\
+^i(/home/deega/.xmonad/icons/cpu.xbm) ${cpu cpu0} ${cpu cpu1} \
+^i(/home/deega/.xmonad/icons/mem.xbm) ${memperc} \
 ^i(/home/deega/.xmonad/icons/net_up_03.xbm) ${upspeedf enp2s0} \
 ^i(/home/deega/.xmonad/icons/net_down_03.xbm) ${downspeedf enp2s0} \
 ^ca(1, urxvt -e alsamixer)^ca(3, amixer -M set Master playback 0)\

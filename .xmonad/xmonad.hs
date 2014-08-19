@@ -125,5 +125,5 @@ main = do
         , logHook = logBar panel
         } `additionalKeys` mkeys
         where top = "dzen2 -p -ta l -e 'button3=' -fn '" 
-                    ++ myfn ++ "' -fg '" ++ black ++ "' -bg '" ++ grey ++ "' -w 800"
+                    ++ myfn ++ "' -fg '" ++ black ++ "' -bg '" ++ grey ++ "' -w 700"
                     ++ " -h 20 "
