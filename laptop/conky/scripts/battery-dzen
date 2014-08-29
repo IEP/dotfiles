@@ -1,0 +1,8 @@
+if [[ -f /tmp/dzen-bat ]]; then
+    exit
+fi
+touch /tmp/dzen-bat
+(echo ""; acpi; sleep 5) | dzen2 -x 1050 -y 24 -l 2 -w 300 -h 14 -fn "Meslo LG S for Powerline:size=8" -e 'onstart=uncollapse;button1=exit,exec:rm /tmp/dzen-bat;button3=exit,exec:rm /tmp/dzen-bat' -sa c -bg "#1C1C1C" -fg "#D8D8D8"
+if [[ -f /tmp/dzen-bat ]]; then
+    rm /tmp/dzen-bat
+fi

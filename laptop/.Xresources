@@ -1,0 +1,53 @@
+urxvt.font: xft:Meslo LG S for Powerline:size=8
+urxvt.scrollBar: false
+
+*background: #373737
+*foreground: #ededed
+
+! black
+*color0: #101010
+
+! bright_black
+*color8: #373737
+
+! red
+*color1: #ba4028
+
+! bright_red
+*color9: #edb6ab
+
+! green
+*color2: #28ba40
+
+! bright_green
+*color10: #abedb6
+
+! yellow
+*color3: #a1ba28
+
+! bright_yellow
+*color11: #e2edab
+
+! blue
+*color4: #4028ba
+
+! bright_blue
+*color12: #b6abed
+
+! magenta
+*color5: #ba28a1
+
+! bright_magenta
+*color13: #edabe2
+
+! cyan
+*color6: #28a1ba
+
+! bright_cyan
+*color14: #abe2ed
+
+! white
+*color7: #b9b9b9
+
+! bright_white
+*color15: #ededed

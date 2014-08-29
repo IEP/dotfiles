@@ -1,0 +1,15 @@
+capacity=`cat /sys/class/power_supply/BAT1/capacity`
+status=`cat /sys/class/power_supply/BAT1/status`
+if [[ $capacity -lt 15 ]]; then
+    icon='bat_empty_02.xbm'
+    bar=`echo $capacity | gdbar -fg red -bg black -h 1 -w 50`
+else
+    icon='bat_full_02.xbm'
+    bar=`echo $capacity | gdbar -fg '#EEEEEE' -bg black -h 1 -w 50`
+fi
+if [[ $status != "Discharging" ]]; then
+    icon='ac.xbm'
+    bar=`echo $capacity | gdbar -fg green -bg black -h 1 -w 50`
+fi
+icon='^i(/home/deega/icons/'"$icon)"
+echo "$icon $bar"

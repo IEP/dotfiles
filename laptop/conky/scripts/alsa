@@ -1,0 +1,6 @@
+vol=`amixer -M get Master | tail -n 1 | sed -r "s/.*\[([0-9]+)\%\].*/\1/"`
+icon='^i(/home/deega/icons/spkr_01.xbm)'
+bar=`echo $vol | gdbar -fg '#EEEEEE' -bg black -h 1 -w 50`
+up="^ca(4, amixer -M set Master playback 2%+ unmute)"
+down="^ca(5, amixer -M set Master playback 2%- unmute)"
+echo "$up$down$icon $bar^ca()^ca()"

@@ -1,0 +1,10 @@
+if [[ -f /tmp/dzen-music ]]; then
+    exit
+fi
+touch /tmp/dzen-music
+vol=`amixer -M get Master | tail -n 1 | sed -r "s/.*\[([0-9]+)\%\].*/\1/"`
+mvol=`mpc | tail -n 1 | sed -r "s/([0-9]+)\%.*/\1/" | sed "s/volume://"`
+(echo ""; echo "ALSA volume: $vol  MPC volume: $mvol"; sleep 5) | dzen2 -x 1120 -y 24 -l 2 -h 14 -w 210 -fn "Meslo LG S for Powerline:size=8" -e 'onstart=uncollapse;button1=exit;exec:rm /tmp/dzen-music;button3=exit;rm /tmp/dzen-music' -sa c -bg "#1C1C1C" -fg "#D8D8D8"
+if [[ -f /tmp/dzen-music ]]; then
+    rm /tmp/dzen-music
+fi

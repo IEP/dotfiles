@@ -1,0 +1,24 @@
+background no
+out_to_console yes
+out_to_x no
+update_interval 0.3
+mpd_host localhost
+total_run_times 0
+use_spacer none
+use_xft yes
+
+TEXT
+$if_mpd_playing\
+^ca(1,urxvt -t music -e ncmpcpp) \
+^i(/home/deega/icons/note.xbm) ${mpd_title 40} \
+^ca()\
+^bg(\#2E9AFE)^ca(3,mpc stop) \
+^ca(1,mpc prev)^i(/home/deega/icons/prev.xbm)^ca() \
+^ca(1,mpc toggle)^i(/home/deega/icons/playpause.xbm)^ca() \
+^ca(1,mpc next)^i(/home/deega/icons/next.xbm)^ca() \
+^ca()\
+$endif\
+^bg()^ca(1,~/conky/scripts/volume)\
+^ca(3,urxvt -t music -e ncmpcpp) ${exec ~/conky/scripts/alsa} ^ca()^ca()\
+^bg(\#2E9AFE)^ca(1,~/conky/scripts/battery-dzen) ${exec ~/conky/scripts/battery} ^ca()\
+^bg()^ca(1,~/conky/scripts/dateshow) ${exec date +"%R"} ^ca()\

@@ -1,0 +1,13 @@
+if [[ -f /tmp/dzen-cal ]]; then
+    exit
+fi
+touch /tmp/dzen-cal
+color='^fg(#2E9AFE)'
+today=`date | sed -r "s/(.*) [0-9]+\:.* WIB ([0-9]+)/\1 \2/"`
+tanggal=`date | cut -d' ' -f3`
+mon=`cal | head -n 1`
+show=`cal | tail -n+2 | sed -e "s/$tanggal/$color$tanggal^fg()/"`
+(echo "$color$today^fg()"; echo "$mon"; echo "$show"; sleep 5) | dzen2 -x 1226 -y 24 -l 9 -w 130 -h 14 -e 'onstart=uncollapse;button1=exit,exec:rm /tmp/dzen-cal;button3=exit,exec:rm /tmp/dzen-cal' -fn "Meslo LG S for Powerline:size=8" -sa c -bg "#1C1C1C" -fg "#D8D8D8"
+if [[ -f /tmp/dzen-cal ]]; then
+    rm /tmp/dzen-cal
+fi
