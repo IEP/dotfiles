@@ -1,0 +1,12 @@
+#!/bin/bash
+# Register local herdr plugins (registration lives in herdr state, not config).
+# Re-runs when the plugin manifest changes.
+# herdr-plugin.toml hash: {{ include "dot_config/herdr/local-plugins/open-in-vscode/herdr-plugin.toml" | sha256sum }}
+set -euo pipefail
+
+command -v herdr >/dev/null || exit 0
+
+plugin_dir="$HOME/.config/herdr/local-plugins/open-in-vscode"
+if ! herdr plugin list 2>/dev/null | grep -q '^- local\.open-in-vscode '; then
+  herdr plugin link "$plugin_dir" >/dev/null
+fi

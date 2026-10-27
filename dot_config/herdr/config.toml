@@ -1,0 +1,10 @@
+onboarding = false
+
+[remote]
+manage_ssh_config = true
+
+[[keys.command]]
+key = "prefix+shift+o"
+type = "plugin_action"
+command = "local.open-in-vscode.open"
+description = "open in VS Code"

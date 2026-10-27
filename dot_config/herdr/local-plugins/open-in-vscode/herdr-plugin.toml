@@ -1,0 +1,12 @@
+id = "local.open-in-vscode"
+name = "Open in VS Code"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Open a workspace's folder in VS Code"
+platforms = ["macos"]
+
+[[actions]]
+id = "open"
+title = "Open in VS Code"
+contexts = ["workspace"]
+command = ["/bin/bash", "open.sh"]
