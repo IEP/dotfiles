@@ -2,7 +2,8 @@
 # Opens the invoking workspace's folder in VS Code.
 # Folder priority: git worktree checkout > focused pane cwd > any pane cwd.
 set -euo pipefail
-export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+# herdr may launch us without the login shell PATH (Homebrew, snap, ~/.local).
+export PATH="/opt/homebrew/bin:/usr/local/bin:/snap/bin:$HOME/.local/bin:$PATH"
 
 herdr="${HERDR_BIN_PATH:-herdr}"
 ctx="${HERDR_PLUGIN_CONTEXT_JSON:-{\}}"
@@ -28,6 +29,9 @@ fi
 
 if command -v code >/dev/null; then
   code "$dir"
-else
+elif [[ "$(uname)" == Darwin ]]; then
   open -a "Visual Studio Code" "$dir"
+else
+  echo "open-in-vscode: 'code' not found on PATH" >&2
+  exit 1
 fi

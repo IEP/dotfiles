@@ -3,7 +3,7 @@ name = "Open in VS Code"
 version = "0.1.0"
 min_herdr_version = "0.7.0"
 description = "Open a workspace's folder in VS Code"
-platforms = ["macos"]
+platforms = ["macos", "linux"]
 
 [[actions]]
 id = "open"
