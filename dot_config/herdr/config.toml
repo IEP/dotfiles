@@ -8,3 +8,9 @@ key = "prefix+shift+o"
 type = "plugin_action"
 command = "local.open-in-vscode.open"
 description = "open in VS Code"
+
+[[keys.command]]
+key = "prefix+shift+f"
+type = "plugin_action"
+command = "local.open-in-file-manager.open"
+description = "open in file manager"
