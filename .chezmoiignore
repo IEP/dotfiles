@@ -1,0 +1,4 @@
+
+# herdr-app regenerates these type files in each mod
+.config/herdr-app/mods/*/gpui-kit.d.ts
+.config/herdr-app/mods/*/jsconfig.json
