@@ -1,0 +1,2 @@
+{{- /* herdr-app keys.json is the full keymap and differs per OS: see .chezmoitemplates/herdr-app-keys.<os>.json */ -}}
+{{ includeTemplate (printf "herdr-app-keys.%s.json" .chezmoi.os) . -}}

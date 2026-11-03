@@ -1,0 +1,3 @@
+{{- /* Per-OS herdr-app settings (zoom, fonts, sounds): .chezmoitemplates/herdr-app-settings.<os>.json.
+     Unmanaged on an OS without that file (see .chezmoiignore). */ -}}
+{{ includeTemplate (printf "herdr-app-settings.%s.json" .chezmoi.os) . -}}

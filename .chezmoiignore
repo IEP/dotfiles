@@ -1,4 +1,9 @@
-
 # herdr-app regenerates these type files in each mod
 .config/herdr-app/mods/*/gpui-kit.d.ts
 .config/herdr-app/mods/*/jsconfig.json
+
+# herdr-app settings.json is per-OS (.chezmoitemplates/herdr-app-settings.<os>.json).
+# Leave it unmanaged on an OS whose settings haven't been captured yet, so they aren't overwritten.
+{{ if not (stat (joinPath .chezmoi.sourceDir ".chezmoitemplates" (printf "herdr-app-settings.%s.json" .chezmoi.os))) }}
+.config/herdr-app/settings.json
+{{ end }}
